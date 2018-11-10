@@ -66,7 +66,9 @@ def parseChild(json, fileObject):
 
         separator = line.find(":")
         
-        if separator == -1:
+        if separator == -1 or line[0] == " ":
+            value = value + line[1:]
+            json[key] = value
             continue
 
         key = line[:separator]
