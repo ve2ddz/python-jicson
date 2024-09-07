@@ -14,6 +14,5 @@ jobs:
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: list /
         run: |
-          ls /
           ls ${{ github.workspace }}
       - run: echo "🍏 Finished with status ${{ job.status }}."
